@@ -8,8 +8,8 @@ import { testQuestions } from '../../db/fakeDb'
 
 const Question = props => {
     // const {} = props
+    const [answer, setAnswer] = useState('')
     const {id, directions, question, choices, correct } = testQuestions[0]
-    console.log(choices[0].keys)
     let mapKey = -1
     let letterArr = ["a.", "b.", "c.", "d."]
     return (
@@ -19,7 +19,7 @@ const Question = props => {
                 <h3>{id + ". " + question}</h3>
                 <form>
                     <label> 
-                        <select size={4}>
+                        <select size={4} onClick={e => setAnswer(e.target.value)}>
                             {choices.map(choice => {
                                 mapKey++
                                 return (
@@ -29,6 +29,7 @@ const Question = props => {
                                 )
                             })}
                         </select>
+                        <br/>
                         <input type="submit" />
                     </label>
                 </form>
