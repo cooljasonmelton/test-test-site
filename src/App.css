@@ -1,9 +1,10 @@
 :root {
   --bg-color: #F1FAEE;
-  --red-color: #E63946;
   --light-blue-color: #A8DADC;
   --medium-blue-color: #457B9D;
   --dark-blue-color: #1D3557;
+  --red-color: #E63946;
+  --green-color: #6EAD34;
 }
 
 .cfb{

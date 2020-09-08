@@ -6,12 +6,11 @@ import './TestContainer.css';
 const Question = props => {
     // props
     const { submitAnswer, qData } = props
-    const {id, directions, question, choices, correct } = qData
+    const { id, directions, question, choices, correct } = qData
 
     // state
     const [answer, setAnswer] = useState('')
     
-
     const handleSubmit = e => {
         e.preventDefault()
         submitAnswer({
@@ -24,7 +23,7 @@ const Question = props => {
     // as choices maped, each given a number as key 
     // and letter from letterArr
     let mapKey = -1
-    let letterArr = ["a.", "b.", "c.", "d."]
+    let letterArr = ["a", "b", "c", "d"]
 
     return (
         <div className="Question cfb">
@@ -33,13 +32,16 @@ const Question = props => {
                 <form className="cfb" onSubmit={e =>handleSubmit(e)}>
                     <label> 
                         <h3>{id + ". " + question}</h3>
-                        <select size={4} onClick={e => setAnswer(e.target.value)}>
+                        <select size={4} 
+                            onClick={e => setAnswer(e.target.value)}
+                            value={answer}
+                            className="q-select">
                             {choices.map(choice => {
                                 mapKey++
                                 return (
                                     <option key={mapKey}
                                         className="q-option">
-                                        {letterArr[mapKey] + " " + choice}
+                                        {letterArr[mapKey] + ". " + choice}
                                     </option>
                                 )
                             })}

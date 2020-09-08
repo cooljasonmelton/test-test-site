@@ -8,26 +8,27 @@ import Question from './Question';
 
 // data
 import {testQuestions} from '../../db/fakeDb'
+import ResultsContainer from './ResultsContainer';
 
 const TestContainer = () => {
   const [allAnswers, setAllAnswers] = useState([])
-  const [qNumber, setQNumber] = useState(1)
+  const [qNumber, setQNumber] = useState(0)
 
   const submitAnswer = answer => {
-    setAllAnswers([answer, ...allAnswers]) 
-    setQNumber(qNumber+1)
+    setAllAnswers([...allAnswers, answer]) 
+    setQNumber(qNumber + 1)
   }
 
   const currentQuestion = () => {
-    let qData = testQuestions.filter(q => q.id === qNumber)[0]
+    const qData = testQuestions[qNumber]
     return <Question submitAnswer={submitAnswer} qData={qData}/>
   }
 
   return (
-    <div className="TestContainer">
+    <div className="TestContainer cfb">
       {qNumber < testQuestions.length ?
         currentQuestion() :
-          ""}
+          <ResultsContainer allAnswers={allAnswers}/>}
     </div>
   );
 }

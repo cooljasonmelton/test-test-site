@@ -2,13 +2,17 @@
     background-color: var(--light-blue-color);
 }
 
+/* QUESTION CSS */
 .Question{
-    margin: 2em;
+    margin: 1em;
     padding: 2em;
+    width: 60%;
+
     background-color: var(--bg-color);
     border: 1px solid var(--medium-blue-color);
     border-radius: 2em;
     box-shadow: 1px 2px 2px var(--medium-blue-color);
+
     color: var(--dark-blue-color);
 }
 
@@ -17,10 +21,20 @@
     border: 1px solid var(--medium-blue-color);
     border-radius: 2em;
 }
+
 .q-option{
     padding: 0.5em;
     color: var(--dark-blue-color);
     font-weight: 600;
+}
+
+.q-select{
+    padding: 1em;
+    border-radius: 2em;
+    width: 100%;
+}
+.q-select:focus{
+    outline: none;
 }
 
 .q-submit{
@@ -28,9 +42,21 @@
     padding: 0.5em 1em;
     border-radius: 2em;
     background-color: var(--light-blue-color);
-
 }
-
 .q-submit:focus{
     outline: none;
+}
+
+/* RESULT CSS */
+.ResultsContainer{
+    width: 100%;
+}
+.r-answered-correct{
+    color: var(--green-color);
+}
+.r-correct-option{
+    color: var(--medium-blue-color);
+}
+.r-answer-option{
+    color: var(--red-color);
 }
