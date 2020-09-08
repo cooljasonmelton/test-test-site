@@ -1,0 +1,36 @@
+.TestContainer{
+    background-color: var(--light-blue-color);
+}
+
+.Question{
+    margin: 2em;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border: 1px solid var(--medium-blue-color);
+    border-radius: 2em;
+    box-shadow: 1px 2px 2px var(--medium-blue-color);
+    color: var(--dark-blue-color);
+}
+
+.q-directions{
+    padding: 1em;
+    border: 1px solid var(--medium-blue-color);
+    border-radius: 2em;
+}
+.q-option{
+    padding: 0.5em;
+    color: var(--dark-blue-color);
+    font-weight: 600;
+}
+
+.q-submit{
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    background-color: var(--light-blue-color);
+
+}
+
+.q-submit:focus{
+    outline: none;
+}

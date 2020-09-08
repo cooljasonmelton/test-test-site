@@ -3,9 +3,6 @@ import React, {useState} from 'react';
 // styling
 import './TestContainer.css';
 
-// components
-import Question from './Question';
-
 // data
 import {testQuestions} from '../../db/fakeDb'
 
@@ -25,9 +22,10 @@ const TestContainer = () => {
 
   return (
     <div className="TestContainer">
-      {qNumber < testQuestions.length ?
+      {/* {qNumber < testQuestions.length ?
         currentQuestion() :
-          ""}
+          <Results allAnswers={allAnswers}/>} */}
+        <Results />
     </div>
   );
 }
