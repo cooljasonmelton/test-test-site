@@ -1,9 +1,10 @@
 :root {
   --bg-color: #F1FAEE;
-  --red-color: #E63946;
   --light-blue-color: #A8DADC;
   --medium-blue-color: #457B9D;
   --dark-blue-color: #1D3557;
+  --red-color: #E63946;
+  --green-color: #6EAD34;
 }
 
 .cfb{
@@ -11,6 +12,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.App{
+  background-color: var(--light-blue-color);
 }
 
 /* https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557 */

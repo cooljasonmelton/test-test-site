@@ -2,16 +2,33 @@ import React, {useState} from 'react';
 
 // styling
 import './TestContainer.css';
-import Question from './Question';
 
 // components
+import Question from './Question';
+
+// data
+import {testQuestions} from '../../db/fakeDb'
+import ResultsContainer from './ResultsContainer';
 
 const TestContainer = () => {
   const [allAnswers, setAllAnswers] = useState([])
-  return (
-    <div className="TestContainer">
-      <Question/>
+  const [qNumber, setQNumber] = useState(0)
 
+  const submitAnswer = answer => {
+    setAllAnswers([...allAnswers, answer]) 
+    setQNumber(qNumber + 1)
+  }
+
+  const currentQuestion = () => {
+    const qData = testQuestions[qNumber]
+    return <Question submitAnswer={submitAnswer} qData={qData}/>
+  }
+
+  return (
+    <div className="TestContainer cfb">
+      {qNumber < testQuestions.length ?
+        currentQuestion() :
+          <ResultsContainer allAnswers={allAnswers}/>}
     </div>
   );
 }

@@ -16,34 +16,22 @@ export const testQuestions = [
         directions: "Select the option that best answers the question.",
         question: "How many factors does 280 have?",
         choices: [
-            { a: "1" },
-            { b: "5" },
-            { c: "10" },
-            { d: "15" }
+            "1",
+            "5",
+            "10",
+            "15"
         ],
         correct: "d"
     },
     {
         id: 3,
-        directions: "Select the option that best answers the question.",
-        question: "How many factors does 280 have?",
-        choices: [
-            { a: "1" },
-            { b: "5" },
-            { c: "10" },
-            { d: "15" }
-        ],
-        correct: "d"
-    },
-    {
-        id: 4,
         directions: "Select the option that best completes the following sentence:",
         question: "Don't make so much noise. Noriko ..... to study for her ESL test!",
         choices: [
-            { a: "try" },
-            { b: "tries" },
-            { c: "tried" },
-            { d: "is trying" }
+            "try",
+            "tries",
+            "tried",
+            "is trying"
         ],
         correct: "d"
     },
